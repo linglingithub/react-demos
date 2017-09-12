@@ -45,8 +45,10 @@ http.createServer(function(req, res) {
     res.statusCode = 404;
     res.end();
   }
-}).listen(3000, function(err) {
+}).listen(9000, function(data){
+    console.log('Listening on 3000...');
+}, function(err) {
   if (err) throw err;
-  console.log('Listening on 3000...');
+  console.log('Error....');
 })
 

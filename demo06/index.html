@@ -9,17 +9,38 @@
     <div id="example"></div>
     <script type="text/babel">
 
-      var data = 123;
+        var data = 123; //'123'
 
-      var MyTitle = React.createClass({
-        propTypes: {
-          title: React.PropTypes.string.isRequired,
+        var MyTitle = React.createClass({
+            propTypes: {
+                title: React.PropTypes.string.isRequired,
+            },
+
+            render: function() {
+                return <h1> {this.props.title} </h1>;
+            }
+        });
+
+
+      var MyTitle1 = React.createClass({
+        getDefaultProps: function(){
+            return {
+                title: 'default hello word'
+            }
         },
-
         render: function() {
           return <h1> {this.props.title} </h1>;
         }
       });
+
+//        ReactDOM.render1(
+////                <MyTitle  title="user hello world"/>,
+//
+//               <MyTitle1  />,
+//
+//
+//            document.getElementById('example')
+//        );
 
       ReactDOM.render(
         <MyTitle title={data} />,
