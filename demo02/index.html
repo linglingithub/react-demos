@@ -10,6 +10,7 @@
     <script type="text/babel">
       var names = ['Alice', 'Emily', 'Kate'];
 
+      /**
       ReactDOM.render(
         <div>
         {
@@ -20,6 +21,19 @@
         </div>,
         document.getElementById('example')
       );
+      */
+
+      ReactDOM.render(
+              <div>
+                  {
+                      names.map((name, index) => {
+                          return <div>Hello, {name}!</div>
+                      })
+                  }
+              </div>,
+          document.getElementById('example')
+      );
+
     </script>
   </body>
 </html>

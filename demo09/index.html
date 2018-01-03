@@ -16,11 +16,11 @@
           this.setState({value: event.target.value});
         },
         render: function () {
-          var value = this.state.value;
+          var valueInput = this.state.value;
           return (
             <div>
-              <input type="text" value={value} onChange={this.handleChange} />
-              <p>{value}</p>
+              <input type="text" value={valueInput} onChange={this.handleChange} />
+              <p>{valueInput}</p>
             </div>
           );
         }
